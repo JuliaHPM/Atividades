@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-BR">
+	<title>Questão 3 - CSS</title>
+	
+	<!--Construa um site contendo suas comidas e bebidas favoritas, 
+	organizadas em listas. Cada lista deve ser destacada com uma borda,
+	com estilização de sua preferência. O primeiro item de cada lista deve
+	possuir um destaque através de cor de fundo - igual nas duas listas.
+	A cor da fonte da lista de comidas é verde e a de bebidas é marrom.-->
+
+	<!--<link rel="stylesheet" type="text/css" href="style2.css">-->
+	<link rel="icon" type="image/jpg" href="https://cdn.icon-icons.com/icons2/3078/PNG/128/student_work_office_desk_work_space_computer_working_support_icon_191191.png">
+	<style>
+		body{
+			margin:0;
+			width: 100%;
+			font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+        .cabecalho{
+			width: 100%;
+			height: 50px;
+			text-align: center;
+			font-size: 30px;
+			background-color: rgb(203, 185, 245);
+            padding-top: 15px;
+			color: white;
+        }
+        
+        .cabecalho p{
+            margin-top: 0%;
+        }
+
+		.conteudo{
+			max-width: 450px;
+			text-align: center;
+			margin: auto;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+
+		.comidas{
+			width: 45%;
+			padding-bottom: 10px;
+			margin-right: 5px;
+			border:rgb(24, 185, 24);
+			border-style:solid;
+			border-radius: 10px;
+			color: green;
+		}
+
+		.bebidas{
+			width: 45%;
+			padding-bottom: 10px;
+			border:brown;
+			border-style: ridge;
+			border-radius: 10px;
+			color: brown;
+		}
+
+		li{
+			text-decoration: none;
+		}
+		
+		ul{
+			list-style-type: none;
+			margin:0;
+			padding:0;
+		}
+
+		li:first-child{
+			background-color: rgba(220, 205, 255, 0.692);
+		}
+
+	</style>
+</head>
+<body>
+	<header class="cabecalho">
+		<p>Questão 3 CSS</p>
+	</header>
+
+	<h3 style="text-align: center; color: rebeccapurple;">Meus alimentos favoritos</h3>
+    
+	<main class="conteudo">	
+		<div class="comidas">
+			<h2>Comidas</h2>
+			<ul>
+				<li>Chocolate</li>
+				<li>Panqueca</li>
+				<li>Lasanha</li>
+				<li>Grostoli</li>
+				<li>Bolo</li>
+				<li>Pipoca</li>
+			</ul>
+		</div>
+
+		<div class="bebidas">
+			<h2>Bebidas</h2>
+			<ul>
+				<li>Suco de morango</li>
+				<li>Chocolate quente</li>
+				<li>Café</li>
+				<li>Caipirinha de limão</li>
+				<li>Guaraná</li>
+			</ul>
+		</div>
+	</main>
+</body>
+</html>

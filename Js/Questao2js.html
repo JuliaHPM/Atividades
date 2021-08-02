@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Questão 2 - Back-end</title>
+    <!-- Construa um site que permite selecionar como a frase 
+      "Olá mundo (virtual)!" será mostrada: <h1>, <h2>, <h3>, <h4>, <h5>, <h6> ou <p>. -->
+
+    <!-- Procurar como fazer com DOM parent element? ou de outra forma.. 
+      pra não fazer assim com tantas linhas kk -->
+  </head>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .box-mensagem {
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px grey;
+      width: max-content;
+      padding: 40px;
+      display: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+    }
+    h2 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .hide {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+  </style>
+  <body>
+    <div class="box-mensagem">
+      <h2>Questão 2 - Back-end</h2>
+      <p>Selecione a tag que deseja mostrar a mensagem:</p>
+      <p id="texto">Olá mundo (virtual)!</p>
+      <h1 id="h1" class="hide">Olá mundo (virtual)!</h1>
+      <h2 id="h2" class="hide">Olá mundo (virtual)!</h2>
+      <h3 id="h3" class="hide">Olá mundo (virtual)!</h3>
+      <h4 id="h4" class="hide">Olá mundo (virtual)!</h4>
+      <h5 id="h5" class="hide">Olá mundo (virtual)!</h5>
+      <h6 id="h6" class="hide">Olá mundo (virtual)!</h6>
+      <p id="p" class="hide">Olá mundo (virtual)!</p>
+      <br /><br />
+      <input type="submit" value="h1" onclick="alterarh1()" />
+      <input type="submit" value="h2" onclick="alterarh2()" />
+      <input type="submit" value="h3" onclick="alterarh3()" />
+      <input type="submit" value="h4" onclick="alterarh4()" />
+      <input type="submit" value="h5" onclick="alterarh5()" />
+      <input type="submit" value="h6" onclick="alterarh6()" />
+      <input type="submit" value="p" onclick="alterarp()" />
+    </div>
+    <script>
+      function alterarh1() {
+        document.getElementById("texto").style.display = "none";
+        h1.style.display = "inline";
+        h2.style.display = "none";
+        h3.style.display = "none";
+      }
+
+      function alterarh2() {
+        document.getElementById("texto").style.display = "none";
+        h1.style.display = "none";
+        h2.style.display = "inline";
+        h3.style.display = "none";
+      }
+
+      function alterarh3() {
+        document.getElementById("texto").style.display = "none";
+        h1.style.display = "none";
+        h2.style.display = "none";
+        h3.style.display = "inline";
+      }
+
+      function alterarh4() {
+        document.getElementById("texto").style.display = "none";
+        h1.style.display = "none";
+        h2.style.display = "none";
+        h3.style.display = "none";
+        h4.style.display = "inline";
+      }
+
+      function alterarh5() {
+        document.getElementById("texto").style.display = "none";
+        h1.style.display = "none";
+        h2.style.display = "none";
+        h3.style.display = "none";
+        h4.style.display = "none";
+        h5.style.display = "inline";
+      }
+
+      function alterarh6() {
+        document.getElementById("texto").style.display = "none";
+        h1.style.display = "none";
+        h2.style.display = "none";
+        h3.style.display = "none";
+        h4.style.display = "none";
+        h5.style.display = "none";
+        h6.style.display = "inline";
+      }
+
+      function alterarp() {
+        document.getElementById("texto").style.display = "inline";
+        h1.style.display = "none";
+        h2.style.display = "none";
+        h3.style.display = "none";
+        h4.style.display = "none";
+        h5.style.display = "none";
+        h6.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

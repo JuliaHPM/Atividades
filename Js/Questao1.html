@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Questão 1 - Back-end</title>
+    <!-- Construa um site que permite mostrar
+     uma mensagem de texto digitada em uma caixa de texto (semelhante a um comando ECHO).-->
+  </head>
+  <style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .formulario{
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px grey;
+        width: max-content;
+        padding: 30px;
+        display: relative;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+    }
+    h2{
+        padding-top: 0;
+        margin-top: 0;
+    }
+  </style>
+  <body>
+    <div class="formulario">
+    <h2>Questão 1 - Back-end</h2>
+      <form
+        name="formMensagem"
+        onsubmit="return mostrarMensagem()"
+        method="post"
+      >
+        <label for="nome">Escreva uma mensagem:</label>
+        <input type="text" name="mensagem" />
+        <input type="submit" value="Enviar" />
+      </form>
+    </div>
+    <script>
+      function mostrarMensagem() {
+        var mensagemDigitada = document.forms["formMensagem"]["mensagem"].value;
+        if (mensagemDigitada == "") {
+          alert("Digite algo!");
+          return false;
+        } else {
+          alert(mensagemDigitada);
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+
+

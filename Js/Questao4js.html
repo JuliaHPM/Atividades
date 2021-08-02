@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Questão 4 - Back-end</title>
+    <!-- Construa um site que permite aumentar e diminuir o
+       tamanho da fonte de um texto, até determinado limite.-->
+  </head>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .box {
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px grey;
+      width: max-content;
+      padding: 30px;
+      display: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+    }
+    h2 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+    p {
+      padding-top: 10px;
+    }
+
+    /* slider */
+    .slidecontainer {
+      width: 100%; /* Width of the outside container */
+    }
+
+    .slider {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 15px;
+      border-radius: 5px;
+      background: #d3d3d3;
+      outline: none;
+      opacity: 0.7;
+      -webkit-transition: 0.2s;
+      transition: opacity 0.2s;
+    }
+
+    .slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #04aa6d;
+      cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #04aa6d;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <h2>Questão 4 - Back-end</h2>
+      <p id="texto" style="font-size: 28px">Mude meu tamanho!</p>
+
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="5"
+          max="50"
+          value="16px"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+      <p id="num"></p>
+    </div>
+
+    <script>
+      var texto = document.getElementById("texto");
+
+      //slider:
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("num");
+      output.innerHTML = slider.value + "px"; // Display the default slider value
+
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function () {
+        output.innerHTML = this.value + "px";
+        texto.style.fontSize = this.value + "px";
+      };
+    </script>
+  </body>
+</html>

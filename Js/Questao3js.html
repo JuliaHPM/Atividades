@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Questão 3 - Back-end</title>
+    <!--Construa um site que permite selecionar com qual cor um texto será exibido.-->
+  </head>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .box {
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px grey;
+      width: max-content;
+      padding: 40px;
+      display: relative;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10%;
+    }
+    h2 {
+      padding-top: 0;
+      margin-top: 0;
+    }
+    p {
+      padding-top: 10px;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <h2>Questão 3 - Back-end</h2>
+
+      <p id="texto">Mude a minha cor!</p>
+
+      <label for="cars">Escolha uma cor:</label>
+      <select id="cores">
+        <option></option>
+        <option value="yellow">Amarelo</option>
+        <option value="blue">Azul</option>
+        <option value="red">Vermelho</option>
+        <option value="pink">Rosa</option>
+        <option value="green">Verde</option>
+      </select>
+      <input type="button" id="btnCor" value="Aplicar" />
+      
+    </div>
+
+    <script>
+      var cores = document.getElementById("cores");
+      var texto = document.getElementById("texto");
+      document.getElementById("btnCor").onclick = function () {
+        var cor = cores.options[cores.selectedIndex].value;
+        texto.style.color = cor;
+      };
+
+    </script>
+  </body>
+
+  <!--outro jeito - alterando a classe:
+    
+    .greenText{ color:green; }
+
+    .blueText{ color:blue; }
+
+    .redText{ color:red; }
+
+      <select
+        id="teste"
+        class="greenText"
+      >
+        <option class="greenText" value="Verde">Verde</option>
+        <option class="redText" value="Vermelho">Banana</option>
+        <option class="blueText" value="Azul">Azul</option>
+      </select>
+  
+      document.getElementById("teste").onchange = function(){
+        texto.className=this.options[this.selectedIndex].className;
+      };
+  -->
+</html>
+
+

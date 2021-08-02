@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-BR">
+	<title>Questão 4 - CSS</title>
+
+	<!--Construa um site contendo seções específicas para cabeçalho,
+	banner principal, menu de navegação, conteúdo principal e rodapé. -->
+
+	<!--<link rel="stylesheet" type="text/css" href="style2.css">-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@1,800&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/jpg" href="https://cdn.icon-icons.com/icons2/3078/PNG/128/student_work_office_desk_work_space_computer_working_support_icon_191191.png">
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			margin-top: 35px;
+			font-weight:500;
+			font-family:Arial, Helvetica, sans-serif;
+		}
+
+		.grid-container{
+			display: grid;
+			grid-template-areas: 
+			'menu menu'
+			'cabecalho cabecalho'
+			'coluna banner'
+			'coluna principal'
+			'coluna mais-conteudos'
+			'rodape rodape';
+		}
+
+		.menu{
+			grid-area: menu;
+			position: fixed;
+			top: 0;
+			display: block;
+			width: 100%;
+			height: 20px;
+		}
+
+		li{
+			display: inline-block;
+		}
+
+		li a{
+			display: block;
+			color: white;
+			padding: 10px 10px;
+			text-decoration: none;
+			
+		}
+
+		li a:hover {
+			background-color: rgb(228, 134, 124);
+			
+		}
+
+		ul{
+			list-style-type: none;
+			margin: 0;
+			top: 0;
+			padding: 0;
+			width: 100%;
+			background-color:  rgb(255, 165, 155);
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+
+		.cabecalho{
+			grid-area: cabecalho;
+			position: static;
+			display: block;
+			width: 100%;
+			height: 100px;
+			text-align: center;
+			font-size: 30px;
+			background-color: rgba(255, 165, 155, 0.685);
+			color: white;
+			font-family: 'Karla', sans-serif;
+		}
+
+		.principal{
+			grid-area: principal;
+			padding-left: 15px;
+		}
+
+		.mais-conteudos{
+			grid-area: mais-conteudos;
+			max-width: 100%;
+			text-align: center;
+			margin: auto;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-between;
+			width: 95%;
+			
+		}
+
+		.coluna{
+			grid-area: coluna;
+			position:static;
+			width: 150px;
+			height: 100%;
+			padding:10px;
+			background-color: rgba(252, 216, 212, 0.918);
+		}
+
+		.coluna a{
+			display: block;
+			margin: 10px;
+			text-decoration: none;
+			color: rgb(0, 0, 0);
+			border-bottom: 2px solid rgb(49, 151, 58);
+			
+		}
+
+		.coluna a:hover{
+			-webkit-transform:scale(1.03); 
+     		-moz-transform:scale(1.03); 
+     		-o-transform:scale(1.03);
+       		transform:scale(1.03);
+		}
+
+		.banner{
+			grid-area: banner;
+			background-image: url("https://cdn.pixabay.com/photo/2018/02/24/07/17/pattern-3177414__340.png");
+		/** https://cdn.pixabay.com/photo/2018/02/24/07/17/pattern-3177414__340.png
+		 **/
+		}
+
+		.banner h2{
+			padding-left: 30px;
+			color: white;
+			text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+		}
+
+		.rodape{
+			grid-area: rodape;
+			position:relative;
+			width: 100%;
+			height: max-content;
+			bottom: 0px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+			background-color: rgba(255, 165, 155, 0.685);
+			text-align: center;
+			margin-top: 20px;
+		}
+		.rodape p{
+			margin: 5px;
+			color: rgba(255, 165, 155, 0.685);
+			text-shadow: 1px 1px 1px black;
+		}
+
+		div.polaroid {
+			width: 250px;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			text-align: center;
+			margin-top: 20px;
+			border-radius: 4px;
+		}
+
+		div.polaroid:hover{
+			-webkit-transform:scale(1.1); 
+     		-moz-transform:scale(1.1); 
+     		-o-transform:scale(1.1);
+       		transform:scale(1.1);
+		}
+			
+		div.container {
+			padding: 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="grid-container">	
+		<nav class="menu">
+			<ul>
+				<li><a href="#">Início</a></li>
+				<li><a href="#principal">Principal</a></li>
+				<li><a href="#mais-conteudos">Mais conteúdos</a></li>
+			</ul>
+		</nav>
+		<header class="cabecalho">
+			<p>Questão 4 CSS</p>
+		</header>
+		<div class="coluna">
+			<a href="">Cultivo de rosas</a>
+			<a href="">Adubo orgânico</a>
+			<a href="">Solo para lírios</a>
+			<a href="">Estação das flores</a>
+			<a href="">Fungos nas folhas</a>
+			<a href="">Pétalas escuras</a>
+			<a href="">Cultivo de orquídeas</a>
+		</div>
+
+		<div id="banner" class="banner">
+			<div class="">
+				<h2>Flores</h2>
+			  </div>
+		</div>
+
+		<article class="principal">
+			<h3 id="principal">Subtítulo</h3>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend blandit aliquet. Sed at nunc at diam blandit euismod ac eu ipsum. In lorem est, faucibus eu nunc eu, scelerisque feugiat odio. Suspendisse lobortis ultricies mattis. Donec ut felis nulla. Sed posuere, augue vitae pharetra consequat, libero risus dignissim neque, quis varius nulla lorem eu est. Nullam ut hendrerit neque. Vestibulum sed odio metus. Sed consectetur cursus ornare. Phasellus vitae lacinia purus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur tincidunt urna nulla, in sodales tellus consequat vel. Mauris luctus odio a felis sollicitudin, eget pretium dui consequat. Fusce in nunc vel risus vestibulum rhoncus. Integer ac sem sem. Ut efficitur ut nisl sit amet ullamcorper. </p>
+			<p> Nunc libero eros, consectetur in imperdiet nec, tincidunt vitae nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed tempus vestibulum magna, vel dictum ex facilisis eget. Nunc porta tellus mauris, aliquet rutrum nulla semper ullamcorper. Pellentesque lacinia feugiat finibus. Etiam rhoncus imperdiet nulla vitae sagittis. Vestibulum nunc odio, faucibus ac velit quis, lobortis rhoncus mi. Suspendisse lacinia ligula sapien, ut placerat nunc lobortis id. Donec nulla turpis, pretium sit amet arcu a, tincidunt pharetra metus. Aliquam erat volutpat. Phasellus id euismod lectus, at varius mauris. </p>
+			<p> Nunc libero eros, consectetur in imperdiet nec, tincidunt vitae nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed tempus vestibulum magna, vel dictum ex facilisis eget. Nunc porta tellus mauris, aliquet rutrum nulla semper ullamcorper. Pellentesque lacinia feugiat finibus. Etiam rhoncus imperdiet nulla vitae sagittis. Vestibulum nunc odio, faucibus ac velit quis, lobortis rhoncus mi. Suspendisse lacinia ligula sapien, ut placerat nunc lobortis id. Donec nulla turpis, pretium sit amet arcu a, tincidunt pharetra metus. Aliquam erat volutpat. Phasellus id euismod lectus, at varius mauris. </p>
+		</article>
+
+		<section id="mais-conteudos" class="mais-conteudos secao">
+			
+			<div class="polaroid">
+				<a href=""><img src="https://cdn.pixabay.com/photo/2016/04/12/18/19/carnation-1325012__340.jpg" alt="Banner" style="width:100%"></a>
+				<div class="container">
+				  <p>Cravo</p>
+				</div>
+			  </div>
+			  
+			  <div class="polaroid">
+				<a href=""><img src="https://cdn.pixabay.com/photo/2020/04/05/08/43/wood-anemone-5005120__340.jpg" alt="Banner" style="width:100%"></a>
+				<div class="container">
+				  <p>Anêmona</p>
+				</div>
+			  </div>
+
+			  <div class="polaroid">
+				<a href=""><img src="https://cdn.pixabay.com/photo/2016/02/17/19/08/lotus-1205631__340.jpg" alt="Banner" style="width:100%"></a>
+				<div class="container">
+				  <p>Lótus</p>
+				</div>
+			  </div>
+
+			  <div class="polaroid">
+				<a href=""><img src="https://cdn.pixabay.com/photo/2016/07/11/21/23/water-lily-1510707__340.jpg" alt="Banner" style="width:100%"></a>
+				<div class="container">
+				  <p>Lírio</p>
+				</div>
+			  </div>
+			</section>
+
+		<footer class="rodape">
+			<p>Júlia HPM</p>
+			<p>2021</p>
+		</footer>
+		</div>
+</body>
+</html>

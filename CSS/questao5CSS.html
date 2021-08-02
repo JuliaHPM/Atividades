@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-BR">
+	<title>Questão 5 - CSS</title>
+
+	<!--Construa um site contendo 8 cartões/blocos (3 por linha) de livros contendo: 
+	Título (centralizado), capa (centralizado), autor (justificado) e descrição breve .(justificado). -->
+
+	<!--<link rel="stylesheet" type="text/css" href="style2.css">-->
+	
+	<link rel="icon" type="image/jpg" href="https://cdn.icon-icons.com/icons2/3078/PNG/128/student_work_office_desk_work_space_computer_working_support_icon_191191.png">
+	<style>
+		body{
+			width: 100%;
+			padding:0;
+			margin: 0;
+			font-family:Arial, Helvetica, sans-serif;
+			color: white;
+			background-color:rgb(53, 53, 53);
+		}
+
+		.cabecalho{
+			margin: 0;
+			position:relative;
+			width: 100%;
+			height: 50px;
+			font-size: 15px;
+			justify-content: center;
+		}
+
+		h2{
+			margin: 0;
+			padding-top: 10px;
+			padding-left: 15px;
+			width: 200px;
+			border-bottom: 2px solid rgb(117, 4, 121);
+		}
+
+		.flex-container{
+			width: 100%;
+			text-align: center;
+			align-items: center;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content:start;
+		}
+
+		
+		.bloco {
+			width: 30%;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+			text-align: center;
+			margin-top: 20px;
+			padding: 15px;
+			border-radius: 4px;
+			margin: 10px;
+			background-color: black;
+			align-self: stretch;
+		}
+
+		img{
+			border-radius: 3px;
+			width:40%;
+		}
+
+		img:hover{
+			-webkit-transform:scale(1.1); 
+     		-moz-transform:scale(1.1); 
+     		-o-transform:scale(1.1);
+       		transform:scale(1.1);
+		}
+			
+		div.container {
+			padding: 10px;
+		}
+
+		p.titulo{
+			width: 80%;
+			align-self: center;
+			font-weight: bold;
+			font-size: large;
+			margin: auto;
+			margin-bottom: 10px;
+			border-bottom: 1px solid rgb(117, 4, 121);
+		}
+
+		.autor{
+			text-align: justify;
+			font-weight: bold;
+		}
+
+		.descricao{
+			text-align: justify;
+			color: rgb(161, 159, 159);
+		}
+
+	</style>
+</head>
+
+<body>
+<main>
+	<header class="cabecalho">
+		<h2>Questão 5 CSS</h2>
+	</header>
+
+	<!--Construa um site contendo 8 cartões/blocos (3 por linha) de livros contendo: 
+	Título (centralizado), capa (centralizado), autor (justificado) e descrição breve .(justificado). -->
+	<div class="flex-container">	
+			<div class="bloco">
+				<div class="container">
+					<p class="titulo">1984</p>
+				</div>
+				<a href=""><img src="https://http2.mlstatic.com/D_NQ_NP_621416-MLB44724127706_012021-O.jpg" alt="1984"></a>
+				<div class="container">
+				  <p class="autor">George Orwell</p>
+				  <p class="descricao">Winston vive aprisionado na engrenagem totalitária de uma sociedade completamente dominada pelo Estado, onde tudo é feito coletivamente, mas cada qual vive sozinho. </p>
+				</div>
+			</div>
+			  
+			<div class="bloco">
+				<div class="container">
+					<p class="titulo">O Sol é para todos</p>
+				</div>
+				<a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/51SDFG0BD8L._SX342_SY445_QL70_ML2_.jpg" alt="o sol e para todos"></a>
+				<div class="container">
+				  <p class="autor">Harper Lee</p>
+				  <p class="descricao">O livro conta a história de um advogado branco que defende um homem negro acusado de estuprar uma mulher branca nos Estados Unidos dos anos 1930 e enfrenta represálias da comunidade racista. O livro é narrado pela sensível Scout, filha do advogado e ainda criança na época. Uma história atemporal sobre tolerância, perda da inocência e conceito de justiça.</p>
+				</div>
+			</div>
+			  
+
+			<div class="bloco">
+				<div class="container">
+					<p class="titulo">Ensaio sobre a cegueira</p>
+				</div>
+				<a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/81hcvy5khEL.jpg" alt="Ensaio sobre a cegueira" ></a>
+				<div class="container">
+				  <p class="autor">José Saramago</p>
+				  <p class="descricao">Um motorista parado no sinal se descobre subitamente cego. É o primeiro caso de uma "treva branca" que logo se espalha incontrolavelmente. Resguardados em quarentena, os cegos se perceberão reduzidos à essência humana, numa verdadeira viagem às trevas.</p>
+				</div>
+			</div>
+			  
+	</div>
+	
+	<div class="flex-container">
+		<div class="bloco">
+			<div class="container">
+				<p class="titulo">VOX</p>
+			</div>
+			<a href=""><img src="https://m.media-amazon.com/images/I/313yXJhxDhL.jpg" alt="VOX"></a>
+			<div class="container">
+			  <p class="autor">Christina Dalcher</p>
+			  <p class="descricao">O governo decreta que as mulheres só podem falar 100 palavras por dia. A Dra. Jean McClellan está em negação. Ela não acredita que isso esteja acontecendo de verdade.
+				Esse é só o começo...
+				Em pouco tempo, as mulheres também são impedidas de trabalhar e os professores não ensinam mais as meninas a ler e escrever. Antes, cada pessoa falava em média 16 mil palavras por dia, mas agora as mulheres só têm 100 palavras para se fazer ouvir.
+				...mas não é o fim.
+				Lutando por si mesma, sua filha e todas as mulheres silenciadas, Jean vai reivindicar sua voz.</p>
+			</div>
+		</div>
+		  
+			  
+		<div class="bloco">
+			<div class="container">
+				<p class="titulo">Mulheres que correm com os lobos</p>
+			</div>
+			<a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/7121bMhcNKL.jpg" alt="Mulheres que correm com os lobos"></a>
+			<div class="container">
+			  <p class="autor">CLarissa Pinkola Estés</p>
+			  <p class="descricao">Estés mostra como a natureza instintiva da mulher foi sendo domesticada ao longo dos tempos, num processo que punia todas aquelas que se rebelavam. Segundo a analista, a exemplo das florestas virgens e dos animais silvestres, os instintos foram devastados e os ciclos naturais femininos transformados à força em ritmos artificiais para agradar aos outros. Mas sua energia vital, segundo ela, pode ser restaurada por escavações psíquico-arqueológicas' nas ruínas do mundo subterrâneo.</p>
+			</div>
+		</div>
+
+		<div class="bloco">
+			<div class="container">
+				<p class="titulo">Farenheit 451</p>
+			</div>
+			<a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/41qwit8V+sL._SX331_BO1,204,203,200_.jpg" alt="Farenheit 451"></a>
+			<div class="container">
+			  <p class="autor">Ray Bradbury</p>
+			  <p class="descricao">Guy Montag é um bombeiro. Sua profissão é atear fogo nos livros. Em um mundo onde as pessoas vivem em função das telas e a literatura está ameaçada de extinção, os livros são objetos proibidos, e seus portadores são considerados criminosos. Montag nunca questionou seu trabalho; vive uma vida comum, cumpre o expediente e retorna ao final do dia para sua esposa e para a rotina do lar. Até que conhece Clarisse, uma jovem de comportamento suspeito, cheia de imaginação e boas histórias. Quando sua esposa entra em colapso mental e Clarisse desaparece, a vida de Montag não poderá mais ser a mesma.</p>
+			</div>
+		</div>
+		  
+		
+	</div>
+		
+	<div class="flex-container">
+		<div class="bloco">
+			<div class="container">
+				<p class="titulo">Torto arado</p>
+			</div>
+			<a href=""><img src="https://m.media-amazon.com/images/I/41L2ffvMKIL.jpg" alt="Torto Arado" ></a>
+			<div class="container">
+			  <p class="autor">Itamar Vieira Junior</p>
+			  <p class="descricao">Nas profundezas do sertão baiano, as irmãs Bibiana e Belonísia encontram uma velha e misteriosa faca na mala guardada sob a cama da avó. Ocorre então um acidente. E para sempre suas vidas estarão ligadas — a ponto de uma precisar ser a voz da outra. Numa trama conduzida com maestria e com uma prosa melodiosa, o romance conta uma história de vida e morte, de combate e redenção.</p>
+			</div>
+		</div>
+
+			  <div class="bloco">
+			<div class="container">
+				<p class="titulo">Sapiens: Uma breve história da humanidade</p>
+			</div>
+			<a href=""><img src="https://images-na.ssl-images-amazon.com/images/I/41FU42ESk5L._SX346_BO1,204,203,200_.jpg" alt="Sapiens" ></a>
+			<div class="container">
+			  <p class="autor">Yuval Noah Harari</p>
+			  <p class="descricao">O historiador israelense aplica uma fascinante narrativa histórica a todas as instâncias do percurso humano sobre a Terra. Da Idade da Pedra ao Vale do Silício, temos aqui uma visão ampla e crítica da jornada em que deixamos de ser meros símios para nos tornarmos os governantes do mundo.
+				Harari se vale de uma abordagem multidisciplinar que preenche as lacunas entre história, biologia, filosofia e economia, e, com uma perspectiva macro e micro, analisa não apenas os grandes acontecimentos, mas também as mudanças mais sutis notadas pelos indivíduos.</p>
+			</div>
+		</div>
+		
+		
+	</div>
+</main>
+</body>
+</html>

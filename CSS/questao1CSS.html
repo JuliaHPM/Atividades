@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-BR">
+	<title>Questão 1 - CSS</title>
+	<!--<link rel="stylesheet" type="text/css" href="style2.css">-->
+	<link rel="icon" type="image/jpg" href="https://cdn.icon-icons.com/icons2/3078/PNG/128/student_work_office_desk_work_space_computer_working_support_icon_191191.png">
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			width: 100%;
+			font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+
+        .cabecalho{
+			display: block;
+			width: 100%;
+			height: 50px;
+			text-align: center;
+			font-size: 30px;
+			background-color: rgb(185, 226, 245);
+            padding-top: 15px;
+        }
+        
+        .cabecalho p{
+            margin-top: 0%;
+        }
+
+		.colunas{
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+			width: 100%;
+		}
+
+		.coluna-texto{
+			width: 40%;
+			padding-left: 15px;
+			padding-right: 15px;
+			background-color: rgb(215, 239, 250);
+		}
+
+        .coluna-imagem{
+			width: 60%;
+			padding-left: 5px;
+			margin-top: 30px;
+			text-align: center;
+			
+		}
+
+		.coluna-imagem h2{
+			text-align: left;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<header class="cabecalho">
+		<p>Questão 1 CSS</p>
+	</header>
+	
+    <main class="colunas">
+	<!-- main e article   -->
+		<article class="coluna-texto" id="s2">
+			<h2>Aliquam</h2>
+			<p> Aliquam facilisis risus tellus, at vulputate risus dignissim non. Proin consectetur nulla vitae leo placerat, non luctus lacus vulputate. Curabitur pharetra nibh in felis iaculis convallis. Morbi venenatis tellus urna, et suscipit felis sodales vitae. Sed quis mattis lectus. Aenean laoreet elementum mattis. Quisque sollicitudin tortor eget blandit fringilla. Nullam auctor sed mauris nec aliquam. Nullam porttitor augue non maximus ultricies. </p>
+			<p> Maecenas quis pellentesque leo. Suspendisse nec mi justo. Ut lorem mi, placerat ut lorem sit amet, auctor accumsan risus. Donec vitae ipsum ac tortor facilisis dignissim. Nam mi ligula, posuere eu mattis non, imperdiet ac eros. Nulla consectetur sagittis volutpat. Vivamus massa dolor, pharetra et lobortis eget, ultrices non orci. Aliquam euismod lacus at porta gravida. Pellentesque velit justo, laoreet luctus vulputate eget, sagittis ut arcu. Nunc finibus in mi eu elementum. </p>
+			<p> Duis mattis accumsan neque, eget lacinia purus rutrum sed. Sed non lectus laoreet eros hendrerit cursus tempor eu nisl. Ut gravida id ipsum rhoncus pulvinar. Suspendisse eget venenatis eros, vitae porta dolor. Donec maximus erat sed purus posuere, quis rhoncus leo sagittis. Nunc fringilla ornare metus, quis condimentum purus ullamcorper ac. Mauris facilisis nisl eget lacinia egestas. Praesent congue facilisis vestibulum. Mauris ornare tortor nec eros ornare, eu dignissim nunc vestibulum. Suspendisse quis dolor blandit, suscipit libero et, interdum magna. </p>
+			<h2>Suspendisse</h2>
+			<p> Suspendisse hendrerit laoreet lorem, a faucibus enim laoreet in. Suspendisse in tortor ultricies, dignissim nisl et, placerat libero. Donec placerat odio eget risus elementum, vitae luctus enim vulputate. Nam pharetra ut felis in posuere. Vestibulum quis est ut risus ultrices pharetra ac nec tellus. Suspendisse erat mauris, convallis vestibulum dui quis, elementum ultricies tortor. Aliquam nisi quam, consequat eget consequat nec, volutpat eget lacus. Donec dictum id tortor porta pharetra. Nam tempus nec erat in molestie. Phasellus arcu lorem, dictum quis aliquam eget, convallis eget justo. Fusce ultricies quis massa vitae gravida. Nulla aliquam tristique felis, finibus eleifend dolor elementum non. </p>
+			<p> Donec eu odio ut nisi feugiat tincidunt id vel leo. Sed luctus faucibus urna, eu porta nulla. Sed ullamcorper nibh vitae erat fermentum, iaculis blandit lacus volutpat. Aliquam erat volutpat. Sed eleifend est nec vulputate suscipit. Phasellus libero est, interdum nec scelerisque ut, bibendum ut tortor. Maecenas tempus malesuada ligula, rhoncus consequat quam mollis eu. Nulla nibh felis, egestas et neque sed, elementum tempor neque. Donec euismod, dui a faucibus auctor, nisl leo condimentum mauris, maximus viverra mauris sapien sed leo. Quisque nec pretium dolor. Proin lobortis fermentum convallis. Morbi ornare purus ut magna porta tempor. Aliquam nec felis enim. Aliquam ac fermentum elit, eu tristique turpis. Quisque ac turpis tempus turpis iaculis efficitur. Fusce consectetur, mi ut malesuada efficitur, turpis libero iaculis purus, et euismod dui tortor eget nunc. </p>
+			<h2>Donec</h2>
+			<p> Donec nec dolor magna. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed maximus libero libero, sed volutpat enim ullamcorper quis. Fusce sem justo, sollicitudin quis mauris eget, fermentum tristique arcu. In hac habitasse platea dictumst. Integer eros ipsum, rutrum vel finibus nec, lacinia sed ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper faucibus risus vel porttitor. Nulla vestibulum aliquam nunc ut commodo. Fusce finibus ex ut massa ultrices maximus. Curabitur blandit sit amet risus sed dapibus. Praesent non tortor tincidunt nisl ullamcorper pharetra consequat vitae massa. In tincidunt a dolor id maximus. </p>
+        </article>
+		<article class="coluna-imagem">
+			<img src="https://cdn.pixabay.com/photo/2021/01/28/21/12/wave-5959087__340.jpg" width="500px" height="360px" alt="mar" title="Mar">
+			<img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__180.jpg" width="500px" height="360px" alt="arvore" title="Árvore">
+			<img src="https://cdn.pixabay.com/photo/2020/09/15/09/10/church-5573087__340.jpg" width="500px" height="360px" alt="igreja" title="Igreja">
+			<img src="https://cdn.pixabay.com/photo/2020/02/11/16/25/manarola-4840080_960_720.jpg" width="500px" height="360px" alt="italia" title="Itália">
+			<img src="https://cdn.pixabay.com/photo/2016/02/19/11/36/canal-1209808_960_720.jpg" width="500px" height="360px" alt="veneza" title="Veneza">
+        </article>
+	</main>
+</body>
+</html>
